@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ taglib uri ="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +13,7 @@
     <h1>Tipo_de_Pago</h1>
 
     <button
-        onclick="window.location.href='/TipoPago/add'; return false">
+        onclick="window.location.href='/tipopagos/add'; return false">
         Agregar</button>
 
     <table>
@@ -18,20 +21,19 @@
             <tr>
                 <th>ID_Tipo_Pago</th>
                 <th>Tipo</th>
-                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-            <c:forEach var="item" items="${tipoPagoList}">
+            <c:forEach var="item" items="${tipopagos}">
                 <tr>
                     <td>${item.idTipoPago}</td>
                     <td>${item.tipo}</td>
                     <td>
                         <button
-                            onclick="window.location.href='/TipoPago/update?idTipoPago=${item.idTipoPago}'; return false">
+                            onclick="window.location.href='/tipopagos/update?idTipoPago=${item.idTipoPago}'; return false">
                             Actualizar</button>
                         <button
-                            onclick="window.location.href='/TipoPago/delete?idTipoPago=${item.idTipoPago}'; return false">
+                            onclick="window.location.href='/tipopagos/delete?idTipoPago=${item.idTipoPago}'; return false">
                             Eliminar</button>
                     </td>
                 </tr>

@@ -87,7 +87,7 @@ public class PagoController {
 		//try {
 			
 			pagoDAO.del(idPago);
-			return "redirect:/clientes/findAll";
+			return "redirect:/pago/findAll";
 			
 		//} catch (Exception e) {
 			// TODO: handle exception
