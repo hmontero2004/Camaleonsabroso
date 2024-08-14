@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +26,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="item" items="${pago}">
+			<c:forEach var="item" items="${pagos}">
 				<tr>
 					<td>${item.idPago}</td>
 					<td>${item.idPedido}</td>

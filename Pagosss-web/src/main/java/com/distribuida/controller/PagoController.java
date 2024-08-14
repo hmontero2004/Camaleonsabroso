@@ -1,6 +1,7 @@
 package com.distribuida.controller;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.distribuida.dao.PagoDAO;
 import com.distribuida.dao.TipoPagoDAO;
 import com.distribuida.entities.Pago;
+
+
 
 @Controller
 @RequestMapping("/pago")  // Usar minúsculas y singular para las rutas de recursos
@@ -27,8 +30,9 @@ public class PagoController {
 
     @GetMapping("/findAll")
     public String findAll(ModelMap modelMap) {
-        modelMap.addAttribute("pagos", pagoDAO.findALL());
-        return "listar-pago";  // Retorna la vista "listar-pagos.html"
+    	List<Pago> pagos = pagoDAO.findALL();
+        modelMap.addAttribute("pagos", pagos);
+        return "pago-listar";  // Retorna la vista "listar-pagos.html"
     }
 
  
