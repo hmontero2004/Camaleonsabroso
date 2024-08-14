@@ -7,13 +7,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Tipo_de_Pago</title>
+<title>Tipo de Pago</title>
 </head>
 <body>
-    <h1>Tipo_de_Pago</h1>
+    <h1>Tipo de Pago</h1>
 
-    <button
-        onclick="window.location.href='/tipopagos/add'; return false">
+    <button onclick="window.location.href='/Pagosss-web/tipopagos/findOne?opcion=1'; return false;">
         Agregar</button>
 
     <table>
