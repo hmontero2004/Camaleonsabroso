@@ -29,10 +29,10 @@
                     <td>${item.tipo}</td>
                     <td>
                         <button
-                            onclick="window.location.href='/tipopagos/update?idTipoPago=${item.idTipoPago}'; return false">
+                            onclick="/Pagosss-web/tipopagos/findOne?idTipoPago=${item.idTipoPago}&opcion=1'; return false;">
                             Actualizar</button>
                         <button
-                            onclick="window.location.href='/tipopagos/delete?idTipoPago=${item.idTipoPago}'; return false">
+                            onclick="window.location.href='/Pagosss-web/tipopagos/findOne?idTipoPago=${item.idTipoPago}&opcion=2'; return false;">
                             Eliminar</button>
                     </td>
                 </tr>

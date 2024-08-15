@@ -8,11 +8,16 @@
 </head>
 <body>
 <form action="add" method="post">
-	<input type="hidden" id="idLibro" name="idLibro" value="">
+	<input type="hidden" id="idTipoPago" name="idTipoPago" value="${TipoPago.idTipoPago }">
 	</br>
-	Titulo
-	<input type="text" id="titulo" name="titulo" value="">
+	ID Tipo de pago 
+	<input type="number" id="idTipoPago" name="idTipoPago" value="${TipoPago.idTipoPago }">
 	</br>	
+	Tipo de pago 
+	<input type="text" id="Tipo" name="Tipo" value="${TipoPago.Tipo }">
+	</br>
+	
+	<button type="submit">Acualizar</button>	
 	</form>
 </body>
 </html>
