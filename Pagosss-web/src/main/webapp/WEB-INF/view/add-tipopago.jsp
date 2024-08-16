@@ -17,7 +17,9 @@
 	<input type="text" id="Tipo" name="Tipo" value="${TipoPago.Tipo }">
 	</br>
 	
-	<button type="submit">Acualizar</button>	
+	<button type="submit" onclick="">Guardar</button>
+	<button type="button" onclick="/Pagosss-web/tipopagos/findAll'; return false;">Cancelar</button>
+
 	</form>
 </body>
 </html>
