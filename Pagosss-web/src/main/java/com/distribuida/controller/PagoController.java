@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -48,7 +49,7 @@ public class PagoController {
 		
 		modelMap.addAttribute("tipoPago", tipoPagoDAO.findALL());
 		
-		if (opcion == 1 )return "add-Pagos";
+		if (opcion == 1 )return "add-pago";
 		else return "del-Pagos";
 			
 	}
@@ -63,7 +64,7 @@ public class PagoController {
 	@PostMapping("/add")
 	private String add(@RequestParam("idPago")@Nullable Integer idPago
 			, @RequestParam("idPedido")@Nullable Integer idPedido
-			, @RequestParam("fechaPago")@Nullable Date fechaPago
+			, @RequestParam("fechaPago")@Nullable @DateTimeFormat(pattern = "yyyy-MM-dd") Date fechaPago
 			, @RequestParam("idTipoPago")@Nullable Integer idTipoPago
 			, @RequestParam("monto")@Nullable Double monto
 			, ModelMap modelMap
@@ -74,7 +75,7 @@ public class PagoController {
 			pagoDAO.add(pago); 
 			}else { 
 				Pago pago = new Pago(idPago,idPedido,fechaPago,idTipoPago,monto);
-				pagoDAO.up(pago); 
+				pagoDAO.add(pago); 
 			}
 			return "redirect:/pago/findAll";
 		

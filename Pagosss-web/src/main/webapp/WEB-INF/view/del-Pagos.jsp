@@ -7,11 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Eliminar TipoPago</h1>
+<h1>Eliminar Pago</h1>
  
-<form action="del" method="get">
+<form action="del" method="g">
  
-    <input type="hidden" id="idTipoPagos" name="idTipoPagos" value="${TipoPago.idTipoPago}" />
+    <input type="hidden" id="idPagos" name="idPago" value="${Pago.idPago}" />
  
     <strong>¿Deseas Borrar esta TipoPago?</strong>
     <br/>
@@ -19,8 +19,6 @@
     <button type="submit">BORRAR</button>
     </form>
     
-    <button  onclick="window.location.href='/Pagosss-web/tipopagos/findAll'; return false">
-        CANCELAR
-    </button>
+        <button type="button" onclick="window.location.href='/Pagosss-web/pago/findAll'; return false;">Cancelar</button>    
 </body>
 </html>

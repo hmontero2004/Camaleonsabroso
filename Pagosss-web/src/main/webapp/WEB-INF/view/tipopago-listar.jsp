@@ -29,7 +29,7 @@
                     <td>${item.tipo}</td>
                     <td>
                         <button
-                            onclick="/Pagosss-web/tipopagos/findOne?idTipoPago=${item.idTipoPago}&opcion=1'; return false;">
+                            onclick="window.location.href='/Pagosss-web/tipopagos/findOne?idTipoPago=${item.idTipoPago}&opcion=1'; return false;">
                             Actualizar</button>
                         <button
                             onclick="window.location.href='/Pagosss-web/tipopagos/findOne?idTipoPago=${item.idTipoPago}&opcion=2'; return false;">

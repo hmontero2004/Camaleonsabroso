@@ -8,17 +8,17 @@
 </head>
 <body>
 <form action="add" method="post">
-	<input type="hidden" id="idTipoPago" name="idTipoPago" value="${TipoPago.idTipoPago }">
+     Id de pago
+	<input type="number" id="idTipoPago" name="idTipoPago" value="${TipoPago.idTipoPago}">
 	</br>
-	ID Tipo de pago 
-	<input type="number" id="idTipoPago" name="idTipoPago" value="${TipoPago.idTipoPago }">
+	
 	</br>	
 	Tipo de pago 
-	<input type="text" id="Tipo" name="Tipo" value="${TipoPago.Tipo }">
+	<input type="text" id="Tipo" name="Tipo" value="${TipoPago.Tipo}">
 	</br>
 	
 	<button type="submit" onclick="">Guardar</button>
-	<button type="button" onclick="/Pagosss-web/tipopagos/findAll'; return false;">Cancelar</button>
+	<button type="button" onclick="window.location.href='/Pagosss-web/tipopagos/findAll'; return false;">Cancelar</button>
 
 	</form>
 </body>

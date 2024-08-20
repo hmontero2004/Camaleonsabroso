@@ -55,15 +55,19 @@ public class TipoPagoController {
     		 TipoPago tipoPago = new TipoPago(0, tipo);
         	 tipoPagoDAO.up(tipoPago);
      }
-    	return "redirect:/tipopago/findAll";
+    	return "redirect:/tipopagos/findAll";
      }
      
      @GetMapping("/del")
-     public String del(@RequestParam("idtipopago")@Nullable Integer idtipopago ) {
-     
-    	 tipoPagoDAO.del(idtipopago);
-    	 return "redirect:/tipopago/findAll";
-    	 
+     public String del(@RequestParam("idtipopago") @Nullable Integer idtipopago) {
+         if (idtipopago == null) {
+             // Maneja el caso cuando idtipopago es nulo (puedes mostrar un mensaje de error o redirigir a otra página)
+             return "redirect:/tipopagos/findAll";
+         }
+         
+         tipoPagoDAO.del(idtipopago);
+         return "redirect:/tipopagos/findAll";
      }
+
  }
   

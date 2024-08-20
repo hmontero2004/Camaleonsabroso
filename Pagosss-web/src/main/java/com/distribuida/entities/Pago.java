@@ -24,27 +24,27 @@ public class Pago {
 	@Column(name = "id_pago")
 	private int idPago;
 
-	@Column(name = "IdPedido")
+	@Column(name = "id_pedido")
 	private int idPedido;
 
 	@Column(name = "FechaPago")
 	private Date fechaPago;
 
-	@Column(name = "IdTipoPago")
+	@Column(name = "id_tipo_pago")
 	private int idTipoPago;
 
 	@Column(name = "Monto")
 	private double monto;
 
-	// @JoinColumn(name = "id_tipo_pago")
-	// @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE,
-	// CascadeType.PERSIST, CascadeType.REFRESH})
-	// private TipoPago tipoPago;
+	/*@JoinColumn(name = "id_tipo_pago")
+	@ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE,
+	CascadeType.PERSIST, CascadeType.REFRESH})
+	private TipoPago tipoPago;
 
-	//
-//    @JoinColumn(name = "id_pedido")
-//	@ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-//    private Pedido pedido;
+	
+	@JoinColumn(name = "id_pedido")
+	@ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+	private Pedido pedido;*/
 
 	public Pago() {
 	}

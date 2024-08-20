@@ -2,6 +2,7 @@ package com.distribuida.dao;
 
 import java.util.List;
 
+import javax.persistence.EntityNotFoundException;
 import javax.transaction.Transactional;
 
 import org.hibernate.Session;
@@ -52,6 +53,9 @@ public class TipoPagoDAOImpl implements TipoPagoDAO {
         TipoPago tipoPago = session.get(TipoPago.class, id);
         if (tipoPago != null) {
             session.delete(tipoPago);
+        } else {
+            throw new EntityNotFoundException("TipoPago con ID " + id + " no encontrado.");
         }
     }
+
 }
