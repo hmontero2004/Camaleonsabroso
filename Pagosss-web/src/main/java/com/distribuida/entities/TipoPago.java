@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "TipoPago")
+@Table(name = "tipo_pago")
 public class TipoPago {
 
 

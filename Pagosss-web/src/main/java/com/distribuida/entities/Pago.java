@@ -24,16 +24,16 @@ public class Pago {
 	@Column(name = "id_pago")
 	private int idPago;
 
-	@Column(name = "id_pedido")
+	@Column(name = "idpedido")
 	private int idPedido;
 
-	@Column(name = "FechaPago")
+	@Column(name = "fechapago")
 	private Date fechaPago;
 
-	@Column(name = "id_tipo_pago")
+	@Column(name = "idtipopago")
 	private int idTipoPago;
 
-	@Column(name = "Monto")
+	@Column(name = "monto")
 	private double monto;
 
 	/*@JoinColumn(name = "id_tipo_pago")
