@@ -23,7 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            <c:forEach var="item" items="${tipopagos}">
+            <c:forEach var="item" items="${tipoPagos}">
                 <tr>
                     <td>${item.idTipoPago}</td>
                     <td>${item.tipo}</td>

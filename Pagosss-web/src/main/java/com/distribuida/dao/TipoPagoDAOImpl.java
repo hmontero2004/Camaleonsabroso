@@ -36,14 +36,14 @@ public class TipoPagoDAOImpl implements TipoPagoDAO {
     @Transactional
     public void add(TipoPago tipoPago) {
         Session session = sessionFactory.getCurrentSession();
-        session.save(tipoPago);
+        session.saveOrUpdate(tipoPago);
     }
 
     @Override
     @Transactional
     public void up(TipoPago tipoPago) {
         Session session = sessionFactory.getCurrentSession();
-        session.update(tipoPago);
+        session.saveOrUpdate(tipoPago);
     }
 
     @Override

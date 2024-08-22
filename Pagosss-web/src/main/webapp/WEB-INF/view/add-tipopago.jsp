@@ -9,12 +9,12 @@
 <body>
 <form action="add" method="post">
      Id de pago
-	<input type="number" id="idTipoPago" name="idTipoPago" value="${TipoPago.idTipoPago}">
+	<input type="hidden" id="idTipoPago" name="idTipoPago" value="${tipoPago.idTipoPago}">
 	</br>
 	
 	</br>	
 	Tipo de pago 
-	<input type="text" id="Tipo" name="Tipo" value="${TipoPago.Tipo}">
+	<input type="text" id="tipo" name="tipo" value="${tipoPago.tipo}">
 	</br>
 	
 	<button type="submit" onclick="">Guardar</button>

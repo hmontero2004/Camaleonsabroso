@@ -11,7 +11,7 @@
  
 <form action="del" method="get">
  
-    <input type="hidden" id="idTipoPagos" name="idTipoPagos" value="${TipoPago.idTipoPago}" />
+    <input type="hidden" id="idTipoPago" name="idTipoPago" value="${tipoPago.idTipoPago}" />
  
     <strong>¿Deseas Borrar esta TipoPago?</strong>
     <br/>

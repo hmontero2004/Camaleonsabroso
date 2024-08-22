@@ -23,8 +23,8 @@ public class TipoPagoController {
 
     @GetMapping("/findAll")
     public String findAll(ModelMap modelMap) {
-    	List <TipoPago> TipoPagos = tipoPagoDAO.findALL();
-        modelMap.addAttribute("tipopagos", TipoPagos);  
+    	List <TipoPago> tipoPagos = tipoPagoDAO.findALL();
+        modelMap.addAttribute("tipoPagos", tipoPagos);  
         return "tipopago-listar";  
     }
 
@@ -33,8 +33,8 @@ public class TipoPagoController {
     		             ,@RequestParam("opcion")@Nullable Integer opcion
     		             , ModelMap modelMap) {
     	if(idTipoPago !=null) {
-    		TipoPago tipopago = tipoPagoDAO.findOne(idTipoPago);
-    		modelMap.addAttribute("tipopago",tipopago);
+    		TipoPago tipoPago = tipoPagoDAO.findOne(idTipoPago);
+    		modelMap.addAttribute("tipoPago",tipoPago);
     	}
     	
     	if (opcion == 1) return "add-tipopago";
@@ -43,7 +43,7 @@ public class TipoPagoController {
     }
         
      @PostMapping("/add")
-     private String add (@RequestParam("idtipopago") @Nullable Integer idtipopago
+     private String add (@RequestParam("idTipoPago") @Nullable Integer idtipopago
     		           ,@RequestParam("tipo") @Nullable String tipo
     		           
     		 ) {
@@ -52,14 +52,14 @@ public class TipoPagoController {
     	 tipoPagoDAO.add(tipoPago);
     		 
     	 }else {
-    		 TipoPago tipoPago = new TipoPago(0, tipo);
+    		 TipoPago tipoPago = new TipoPago(idtipopago, tipo);
         	 tipoPagoDAO.up(tipoPago);
      }
     	return "redirect:/tipopagos/findAll";
      }
      
      @GetMapping("/del")
-     public String del(@RequestParam("idtipopago") @Nullable Integer idtipopago) {
+     public String del(@RequestParam("idTipoPago") @Nullable Integer idtipopago) {
          if (idtipopago == null) {
              // Maneja el caso cuando idtipopago es nulo (puedes mostrar un mensaje de error o redirigir a otra página)
              return "redirect:/tipopagos/findAll";
