@@ -34,7 +34,7 @@
 			</div>
 			<div class="form-group">
 				<label for="monto" class="form-label">Monto</label>
-				<input class="form-control" type="number" id="monto" name="monto" value="${Pago.monto}" required>
+				<input class="form-control" step="any" type="number" id="monto" name="monto" value="${Pago.monto}" required>
 			</div>
 			<div class="mt-3">
 				<button class="btn btn-primary" type="submit">Guardar</button>
