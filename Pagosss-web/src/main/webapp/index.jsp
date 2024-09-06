@@ -52,6 +52,8 @@
     <button onclick="window.location.href='/Pagosss-web/pago/findAll'; return false;">Ir a Lista de Pagos</button>
     <br>
         <button onclick="window.location.href='/Pagosss-web/tipopagos/findAll'; return false;">Ir a Tipos de Pagos</button>
+    <br>
+        <button onclick="window.location.href='/Pagosss-web//reportes/reporte1'; return false;">Ir a Reportes</button>
     
 </body>
 </html>
